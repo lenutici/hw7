@@ -1,0 +1,110 @@
+/* CUSTOM CHECKBOX */
+
+.custom_checkbox {
+    margin-bottom: 50px;
+}
+/* Here I added some styles for .container and .row (from custom radio-button)*/
+.container, .row {
+    display: block;
+    position: relative;
+    width: fit-content;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+  }
+  
+  /* Here I took out the browser's default checkbox and radio-button */
+  .container input, .row input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Gave size and position of checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, checkbox will have a diferent background color */
+  .container:hover input ~ .checkmark {
+    background-color: #d17e7e;
+  }
+  
+  /* When the checkbox is checked, it will be colored in red  */
+  .container input:checked ~ .checkmark {
+    background-color: #ca3c3c;
+  }
+  
+  /* Created the checkmark-symbol, to be hidden when not checked */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* When checked, checkmark symbol will appear */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Created styles for the checkmark symbol */
+  .container .checkmark:after {
+    left: 10px;
+    top: 2px;
+    width: 5px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 1px 3px 0;
+    transform: rotate(45deg);
+  }
+   /* CUSTOM RADIO-BUTTON */
+  
+   /* I gave size and position of radio-button */
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, radio-button will have a diferent background color */
+  .row:hover input ~ .circle {
+    background-color: #8cc8a0;
+  }
+  
+   /* When the radio-button is checked, it will be colored in green  */
+  .row input:checked ~ .circle {
+    background-color: #265034;
+  }
+  
+  /* Created the circle, to be hidden when not checked */
+  .circle:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* When checked, dot/circle will appear */
+  .row input:checked ~ .circle:after {
+    display: block;
+  }
+  
+  /* Created styles for the dot/circle */
+  .row .circle:after {
+       top: 5px;
+      left: 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: white;
+  }
